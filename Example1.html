@@ -6,8 +6,103 @@
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
   <body>
-    <<h1>All the Best!</h1>
+    <h1>All the Best!</h1>
     <h2>Problem 1</h2>
 
+    <div id="step1" class="step">
+      <h3>This is a question</h3>
+      <button id="button1"> Button 1</button>
+      <button id="button2"> Button 2</button>
+      <button id="button3"> Button 3</button>
+      <div id="response1" class="hidden response" >
+        <p>This is a wrong answer</p>
+      </div>
+
+      <div id="response2" class="hidden response">
+        <p>This is a wrong answer 2</p>
+      </div>
+    </div>
+
+    <div id="step2" class="hidden step">
+      <h3>This is another question</h3>
+      <button id="button4"> Button 1</button>
+      <button id="button5"> Button 2</button>
+      <button id="button6"> Button 3</button>
+
+      <div id="response3" class="hidden response" >
+        <p>This is the third wrong answer</p>
+      </div>
+
+      <div id="response4" class="hidden response">
+        <p>This is the 4th wrong answer</p>
+      </div>
+    </div>
+
+<div id="step3" class="hidden step">
+  <h3>This is the third question</h3>
+  <button id="button7"> Button 1</button>
+  <button id="button8"> Button 2</button>
+  <button id="button9"> Button 3</button>
+  </div>
+<script type="text/javascript">
+const button1 = document.getElementById('button1');
+const button3 = document.getElementById('button3');
+const response1 = document.getElementById('response1');
+const response2 = document.getElementById('response2');
+const response3 = document.getElementById('response3');
+const response4 = document.getElementById('response4');
+const button2 = document.getElementById('button2');
+const step1 = document.getElementById('step1');
+const step2 = document.getElementById('step2');
+const step3 = document.getElementById('step3');
+const responses = document.getElementsByClassName('response');
+const steps = document.getElementsByClassName('step');
+
+function showResponse(response){
+  hideResponses();
+  response.classList.remove("hidden");
+}
+
+
+function showStep(step){
+  hideSteps();
+  hideResponses();
+  step.classList.remove("hidden");
+}
+
+function hideResponses(){
+  for (let response of responses){
+    response.classList.add("hidden");
+  }
+}
+
+function hideSteps(){
+  for (let step of steps){
+    step.classList.add("hidden");
+  }
+}
+
+
+
+button1.addEventListener("click", () => showResponse(response1));
+
+button2.addEventListener("click", () => showStep(step2));
+
+button3.addEventListener("click", () => showResponse(response2));
+
+button4.addEventListener("click", () => showStep(step3));
+
+button5.addEventListener("click", () => showResponse(response3));
+
+button6.addEventListener("click", () => showResponse(response4));
+
+
+
+
+
+
+
+
+</script>
   </body>
 </html>
