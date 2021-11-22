@@ -8,53 +8,89 @@
   <body>
     <h1>All the Best!</h1>
     <h2>Problem 1</h2>
+    <img src="images\Example1-02.svg" alt="Problem 1" width="100%" height="20%">
 
     <div id="step1" class="step">
-      <h3>This is a question</h3>
-      <button id="button1"> Button 1</button>
-      <button id="button2"> Button 2</button>
-      <button id="button3"> Button 3</button>
+      <h3>What ratio can we use from similarity theorem to find the answer? </h3>
+
       <div id="response1" class="hidden response" >
-        <p>This is a wrong answer</p>
+        <p>We don't know what is AB/PQ.</p>
       </div>
 
       <div id="response2" class="hidden response">
-        <p>This is a wrong answer 2</p>
+        <p>We don't know what is AC/PR.</p>
       </div>
+
+      <button id="button1"> AB/PQ = BC/QR</button>
+      <button id="button2"> A(ABC)/A(PQR) = BC/QR</button>
+      <button id="button3"> BC/QR = AC/PR</button>
+
     </div>
 
+
     <div id="step2" class="hidden step">
-      <h3>This is another question</h3>
-      <button id="button4"> Button 1</button>
-      <button id="button5"> Button 2</button>
-      <button id="button6"> Button 3</button>
+      <p>A(ABC)/A(PQR) = BC/QR</p>
+      <h3>What is the correct ratio according to the given values?</h3>
 
       <div id="response3" class="hidden response" >
-        <p>This is the third wrong answer</p>
+        <p>Check your values again!</p>
       </div>
 
       <div id="response4" class="hidden response">
-        <p>This is the 4th wrong answer</p>
+        <p>Check your values again!</p>
       </div>
-    </div>
+
+      <button id="button4"> 288sq.m/800sq.m</button>
+      <button id="button5"> 800sq.m/288sq.m</button>
+      <button id="button6"> 142sq.m/400sq.m</button>
+  </div>
+
 
 <div id="step3" class="hidden step">
-  <h3>This is the third question</h3>
-  <button id="button7"> Button 1</button>
-  <button id="button8"> Button 2</button>
-  <button id="button9"> Button 3</button>
+  <p>A(ABC)/A(PQR) = BC/QR</p>
+  <p>288sq.m/800sq.m = BC/QR</p>
+
+  <h3>What is the smallest ratio of 288sq.m/800sq.m?</h3>
+
+  <div id="response5" class="hidden response" >
+    <p>You can go lower!</p>
   </div>
+
+  <div id="response6" class="hidden response">
+    <p>You can still go lower!</p>
+  </div>
+
+  <button id="button7"> 144sq.m/400sq.m</button>
+  <button id="button8"> 36sq.m/100sq.m</button>
+  <button id="button9"> 3sq.m/5sq.m</button>
+  </div>
+
+  <div id="step4" class="hidden step">
+    <p>A(ABC)/A(PQR) = BC/QR</p>
+    <p>288sq.m/800sq.m = BC/QR</p>
+    <p>3sq.m/5sq.m = BC/QR</p>
+
+    <p>Well Done!</p>
+  </div>
+
+
 <script type="text/javascript">
 const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
 const button3 = document.getElementById('button3');
+const button4 = document.getElementById('button4');
+const button5 = document.getElementById('button5');
+const button6 = document.getElementById('button6');
 const response1 = document.getElementById('response1');
 const response2 = document.getElementById('response2');
 const response3 = document.getElementById('response3');
 const response4 = document.getElementById('response4');
-const button2 = document.getElementById('button2');
+const response5 = document.getElementById('response5');
+const response6 = document.getElementById('response6');
 const step1 = document.getElementById('step1');
 const step2 = document.getElementById('step2');
 const step3 = document.getElementById('step3');
+const step4 = document.getElementById('step4');
 const responses = document.getElementsByClassName('response');
 const steps = document.getElementsByClassName('step');
 
@@ -95,6 +131,14 @@ button4.addEventListener("click", () => showStep(step3));
 button5.addEventListener("click", () => showResponse(response3));
 
 button6.addEventListener("click", () => showResponse(response4));
+
+button7.addEventListener("click", () => showResponse(response5));
+
+button8.addEventListener("click", () => showResponse(response6));
+
+button9.addEventListener("click", () => showStep(step4));
+
+
 
 
 
